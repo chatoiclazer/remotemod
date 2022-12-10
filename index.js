@@ -9,7 +9,7 @@ const config = require('./config.json');
 
 const bot = new Client({
   commandPrefix: process.env.botPrefix,
-  owner: process.env.ownerId
+  owner: config.ownerId
 });
 
 bot.registry
