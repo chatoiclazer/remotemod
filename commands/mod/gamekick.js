@@ -30,9 +30,6 @@ class GameKickCommand extends (Command) {
 			]
 		});
 	}
-
-	hasPermission(msg) {
-		return permission(msg);
 	}
 
 	async run(msg, { target, reason }) {
