@@ -29,14 +29,13 @@ class GameKickCommand extends (Command) {
 				}
 			]
 		});
-	}
-	}
+	
 
 	async run(msg, { target, reason }) {
 
 		let targetUid = await usernameToUserId(target);
 		if (!targetUid) return msg.reply('Target user doesn\'t exist.');
-
+const targetName = targetUid.username;
 		targetUid = targetUid.id;
 
 		if (getServers().length <= 0) return msg.reply('There are no ongoing game servers.');
