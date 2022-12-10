@@ -8,8 +8,8 @@ const config = require('./config.json');
 
 
 const bot = new Client({
-  commandPrefix: config.botPrefix,
-  owner: config.ownerId
+  commandPrefix: process.env.botPrefix,
+  owner: process.env.ownerId
 });
 
 bot.registry
