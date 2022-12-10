@@ -29,12 +29,18 @@ class GameKickCommand extends (Command) {
 				}
 			]
 		});
-	
+		}
 
-	async run(msg, { target, reason }) {
+
+	hasPermission(msg) {
+		return permission(msg);
+	}
+
+	async run(msg, { target, reason }) }
 
 		let targetUid = await usernameToUserId(target);
 		if (!targetUid) return msg.reply('Target user doesn\'t exist.');
+
 const targetName = targetUid.username;
 		targetUid = targetUid.id;
 
