@@ -1,5 +1,5 @@
 const rbxWebhookServer = require('./rbxwebhook');
-const server = new rbxWebhookServer({ apiKey: require('../../config.json').serverApiKey });
+const server = new rbxWebhookServer({ apiKey: process.env.serverApiKey });
 
 const serversData = {};
 
