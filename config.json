@@ -1,5 +1,5 @@
 {
-	"botToken": "The bot token given from your application (Refer to https://github.com/Zzz9194/disro/wiki#creating--inviting-a-discord-bot)",
+	"TOKEN": "The bot token given from your application (Refer to https://github.com/Zzz9194/disro/wiki#creating--inviting-a-discord-bot)",
 	"botPrefix": "The prefix all your bot commands will use",
 	"ownerId": "Bot owner discord ID (As a string [wrapped in quotes] not as an integer!)",
 	"serverApiKey": "The API key for your server to communicate with the roblox client, can be any random generated string (Refer to https://github.com/Zzz9194/disro/wiki#generating-a-uuid)",
