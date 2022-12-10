@@ -1,4 +1,4 @@
-const modRoleId = require('../config.json').moderationRoleId;
+const modRoleId = process.env.moderationRoleId;
 
 module.exports = {
 	permission: function(msg) {
