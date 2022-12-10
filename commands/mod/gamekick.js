@@ -4,7 +4,6 @@ const { kickUser } = require('../../backend/server/router');
 const { usernameToUserId } = require('../../backend/roblox');
 const { getServerIdByPlayerId, getServers } = require('./_servers');
 
-const { permission } = require('../../backend/discord');
 
 class GameKickCommand extends (Command) {
 	constructor(client) {
