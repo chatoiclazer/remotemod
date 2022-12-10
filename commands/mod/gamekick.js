@@ -4,6 +4,7 @@ const { kickUser } = require('../../backend/server/router');
 const { usernameToUserId } = require('../../backend/roblox');
 const { getServerIdByPlayerId, getServers } = require('./_servers');
 
+const { permission } = require('../../backend/discord');
 
 class GameKickCommand extends (Command) {
 	constructor(client) {
@@ -29,19 +30,17 @@ class GameKickCommand extends (Command) {
 				}
 			]
 		});
-		}
-
+	}
 
 	hasPermission(msg) {
 		return permission(msg);
 	}
 
-	async run(msg, { target, reason }) }
+	async run(msg, { target, reason }) {
 
 		let targetUid = await usernameToUserId(target);
 		if (!targetUid) return msg.reply('Target user doesn\'t exist.');
 
-const targetName = targetUid.username;
 		targetUid = targetUid.id;
 
 		if (getServers().length <= 0) return msg.reply('There are no ongoing game servers.');
